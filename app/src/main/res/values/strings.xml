@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cambio de Monedas</string>
+    <string name="tvMoneda">Moneda:</string>
+    <string name="tvCantidad">Cantidad</string>
+    <string name="btnCalcular">Calcular</string>
+    <string-array name="coin">
+        <item>DOP</item>
+        <item>USD</item>
+        <item>EUR</item>
+    </string-array>
+</resources>

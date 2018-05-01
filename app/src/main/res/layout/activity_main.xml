@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="7dp"
+            android:text="@string/tvMoneda"
+            android:layout_marginStart="7dp" />
+        <Spinner
+            android:id="@+id/spCoin"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@+id/tvCoin"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/tvCoin"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/tCant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCantidad"
+            android:textSize="18sp"
+            android:layout_marginTop="45dp"/>
+        <EditText
+            android:id="@+id/tCantidad"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/tCant"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tCant" />
+        <TextView
+            android:id="@+id/tResult1"
+            android:layout_width="290dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:background="@android:color/holo_red_light"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/tResult2"
+            android:layout_width="290dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="130dp"
+            android:gravity="center"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="@string/btnCalcular"
+            android:layout_centerHorizontal="true"
+            android:onClick="calculate"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
