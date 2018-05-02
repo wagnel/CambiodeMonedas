@@ -46,23 +46,27 @@ public class MainActivity extends AppCompatActivity {
     // Este metodo es para calcular el cambio de moneda
     @SuppressLint("SetTextI18n")
     public void calculate(View view) {
-        String moneda = spMoneda.getSelectedItem().toString();
-        Double cant = Double.parseDouble(cantidad.getText().toString());
+        try {
+            String moneda = spMoneda.getSelectedItem().toString();
+            Double cant = Double.parseDouble(cantidad.getText().toString());
 
-        DecimalFormat df = new DecimalFormat("#,###.##");
-        df.setRoundingMode(RoundingMode.CEILING);
+            DecimalFormat df = new DecimalFormat("#,###.##");
+            df.setRoundingMode(RoundingMode.CEILING);
 
-        if (moneda.equals("DOP")) {
-            result1.setText("US$ " + df.format(cant * (1/PRECIO_DOLAR_DOP)));
-            result2.setText("€ " + df.format(cant * (1/PRECIO_EURO_DOP)));
-        }
-        if (moneda.equals("USD")){
-            result1.setText("DOP$ " + df.format(cant * PRECIO_DOLAR_DOP));
-            result2.setText("€ " + df.format(cant * (1/PRECIO_EURO_USD)));
-        }
-        if (moneda.equals("EUR")){
-            result1.setText("DOP$ " + df.format(cant * PRECIO_EURO_DOP));
-            result2.setText("US$ " + df.format(cant * PRECIO_EURO_USD));
+            if (moneda.equals("DOP")) {
+                result1.setText("US$ " + df.format(cant * (1 / PRECIO_DOLAR_DOP)));
+                result2.setText("€ " + df.format(cant * (1 / PRECIO_EURO_DOP)));
+            }
+            if (moneda.equals("USD")) {
+                result1.setText("DOP$ " + df.format(cant * PRECIO_DOLAR_DOP));
+                result2.setText("€ " + df.format(cant * (1 / PRECIO_EURO_USD)));
+            }
+            if (moneda.equals("EUR")) {
+                result1.setText("DOP$ " + df.format(cant * PRECIO_EURO_DOP));
+                result2.setText("US$ " + df.format(cant * PRECIO_EURO_USD));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

@@ -44,6 +44,7 @@
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@id/tCant"
             android:layout_marginLeft="10dp"
+            android:hint="@string/cantMoneda"
             android:layout_toRightOf="@id/tCant" />
         <TextView
             android:id="@+id/tResult1"
