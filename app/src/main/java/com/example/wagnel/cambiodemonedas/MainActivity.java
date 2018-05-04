@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private Spinner spMoneda;
-    private TextView result1,result2; //  Result1 es el TextView que esta de color rojo
+    private TextView result1,result2; //  Result1 es el TextView o cuadro que esta de color rojo
     private EditText cantidad; // Cantidad ingresada en la aplicacion
     private final double PRECIO_DOLAR_DOP = 49.48d; // Precio del dolar en peso dominicano
     private final double PRECIO_EURO_DOP = 59.47d; // Precio del euro en peso dominicano
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         chargeSpinner();
     }
 
-    // Este metodo carga los dos spinner en el activity main
+    // Este metodo carga el spinner del activity main
     private void chargeSpinner(){
         spMoneda = (Spinner) findViewById(R.id.spCoin);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.coin, android.R.layout.simple_spinner_item);

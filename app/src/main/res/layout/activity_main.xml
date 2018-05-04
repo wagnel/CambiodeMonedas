@@ -22,7 +22,7 @@
             android:layout_marginStart="7dp" />
         <Spinner
             android:id="@+id/spCoin"
-            android:layout_width="130dp"
+            android:layout_width="100dp"
             android:layout_height="25dp"
             android:layout_toEndOf="@+id/tvCoin"
             android:layout_marginStart="10dp"
