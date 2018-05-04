@@ -10,6 +10,3 @@ Esta aplicación tiene la capacidad de realizar cambios de monedas en base a val
 * Peso : _RD$_
 * Dolar : _US$_
 * Euro : _€_
-
-### Referencia
-www.yowaelectronics.com
